@@ -8,11 +8,10 @@ app = Flask (__name__)
 #aqui vai todas as minhas rotas
 #lista de cores pra alterar o fundo do site
 lista_cores = ["red",
-               "#FACADA",
-               "#BABACA",
-               "#00FF00",
-               "#00FFFF",
-               "#555555"]
+               "blue",
+               "orange",
+               "pink"
+                ]
 
 @app.route("/sobre")
 
@@ -23,19 +22,23 @@ def pagina_sobre():
     return render_template("pagina-sobre.html", cor_de_fundo_html = cor_de_fundo)
 
 
-lista_frases = ["Interessante",
-                "Fundamental",
-                "Justiçeiro"]
+lista_frases = ["Não, não consigo tirar você da minha mente, Yeah yeah",
+                "Então me atinja no rosto, algo real como a dor, como se não pudéssemos ficar mais próximos, eu só quero me perder. Então, me chame pelo, me chame pelo seu nome!",
+                "Justiçeiro",
+                "E se eu pedir uma gota de chuva, sei que você vai trazer um oceano",
+                "Lentamente, vejo a luz vermelha, estou preso a esse sonho, lentamente, nos damos a noite toda, como se estivéssemos dançando, você e eu"
+                ]
 
-lista_imgs = ["foto-pericia.jpg",
-              "distintivo-img.jfif"]
+lista_imgs = ["omarrudberg_music.jpg",
+              "omar-picture02.avif",
+              "omar-sfilits.jpg",
+              "omar-young.jpg"]
 
 lista_cores = ["red",
-               "#FACADA",
-               "#BABACA",
-               "#00FF00",
-               "#00FFFF",
-               "#555555"]
+               "blue",
+               "orange",
+               "pink"
+                ]
 
 @app.route("/inicio")
 

@@ -28,9 +28,18 @@
             color: black;
         }
 
+        .imagem-aleatoria{
+
+            margin-top: 50px;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+        }
+
         img{
+
             width: 500px;
-            height: 500px;
+            height: 550px;
         }
 
     </style>
@@ -41,7 +50,7 @@
     
     <header style="background-color: black;">
 
-        <h1>Perícia Criminal</h1>
+        <h1>Omar Rudberg</h1>
 
         <span>COMO</span>
 
@@ -53,9 +62,13 @@
 
     </header>
 
-    <p> A Perícia Criminal é: {{frase_aleatoria_html}}!!!</p>
+    <p>{{frase_aleatoria_html}}!!!</p>
 
-    <img src="/static/img/{{imagem_aleatoria_html}}">
+    <div class="imagem-aleatoria">
+        
+        <img src="/static/img/{{imagem_aleatoria_html}}">
+    
+    </div>
 
 </body>
 
