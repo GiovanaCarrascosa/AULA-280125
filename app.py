@@ -101,6 +101,5 @@ def post_cadastrarcor():
     return redirect ("/cadastrocores")
 
 
-
 #rodar
 app.run(debug=True)
