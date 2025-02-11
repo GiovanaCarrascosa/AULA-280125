@@ -82,12 +82,14 @@ def post_cadastrarfrase():
 
 
 # pagina cadastrar cores
+# GET = exibi o nome digitado no link do site
 @app.route("/cadastrocores", methods=["GET"])
 
 def pagina_cadastro_cores():
 
     return render_template("pagina-cadastro-cor.html", cores_html = lista_cores2 )
 
+# POST = nao exibi o nome digitado no link do site
 @app.route("/post/cadastrocores", methods = ["POST"])
 
 def post_cadastrarcor():
@@ -97,6 +99,8 @@ def post_cadastrarcor():
     lista_cores2.append(cor_vinda_do_html)
 
     return redirect ("/cadastrocores")
+
+
 
 #rodar
 app.run(debug=True)
