@@ -2,11 +2,9 @@
 <html lang="pt-br">
 
 <head>
-
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro de Frases</title>
+    <title>Cadastrar Cores</title>
 
     <!-- importando o frem woriking materalize-->
     <!-- Compiled and minified CSS -->
@@ -18,7 +16,6 @@
     <!-- add icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-    
     <style>
 
         *{
@@ -32,8 +29,8 @@
             margin-top: 20px;
             width: 600px;
             height: 80px;
-            background-color: rgb(255, 201, 241);
-            
+            background-color: rgb(255, 7, 189);
+
         }
 
         .row2{
@@ -46,8 +43,9 @@
 
             width: 600px;
             height: 200px;
-            
+
         }
+
 
     </style>
 
@@ -55,43 +53,40 @@
 
 <body>
 
-    <!-- caixa de texto para o cadastro das cores -->
     <div class="row">
-        <form class="col s12" action="/post/cadastrarfrase" method="POST">
+        <form class="col s12" action="/post/cadastrocores" method="POST">
             <div class="row">
 
                 <div class="input-field col s10">
-                    <input name="frase" id="input_text" type="text" data-length="14">
-                    <label style="color: black;" for="input_text">Input text</label>
+                    <input name="cor" id="input_text" type="text" data-length="14">
+                    <label style="color: white; font-size: large;" for="input_text">Input text</label>
+
+                    
                 </div>
 
                 <button style="background-color: rgb(238, 85, 255); display: flex;" class="btn waves-effect waves-light" type="submit" name="action">Submit
                     <i class="material-icons right">send</i>
                 </button>
 
-            </div>  
+            </div>
 
         </form>
     </div>
-
-    <!-- aqui sera exibido as frases -->
     
     <div class="row2">
         <div class="col s12 m6">
         <!-- para cada item da lista ele vai rodar uma caixa dessa -->
-        {% for frase in frases_html%}
-          <div class="card blue-grey darken-1">
+        {% for cor in cores_html%}
+          <div class="card  darken-1" style="background-color: {{cor}};">
             <div class="card-content white-text">
-              <span class="card-title">FRASE</span>
-                {{frase}}
+              <span class="card-title">COR</span>
+                {{cor}}
             </div>
           </div>
           {% endfor %}
         </div>
       </div>
 
-      <!-- para informar o for que acaba aqui -->
-      
 
 </body>
 
