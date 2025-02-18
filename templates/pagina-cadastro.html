@@ -18,6 +18,9 @@
     <!-- add icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
+    <!-- icone da lixeira -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=delete"/>
+
     
     <style>
 
@@ -30,6 +33,7 @@
         .row{
 
             margin-top: 20px;
+            margin-left: 640px;
             width: 600px;
             height: 80px;
             background-color: rgb(255, 201, 241);
@@ -41,12 +45,19 @@
             align-items: center;
             justify-content: center;
 
-            margin-left: 650px;
+            margin-left: 640px;
             margin-top: 70px;
 
             width: 600px;
             height: 200px;
             
+        }
+
+        .material-symbols-outlined {
+            
+            position: absolute;
+            right: 20px;
+            bottom: 45px;
         }
 
     </style>
@@ -84,6 +95,13 @@
             <div class="card-content white-text">
               <span class="card-title">FRASE</span>
                 {{frase}}
+
+                <a href="/frases/delete/{{loop.index0}}">
+                    <span class="material-symbols-outlined">
+                    delete
+                    </span>
+                </a>
+
             </div>
           </div>
           {% endfor %}

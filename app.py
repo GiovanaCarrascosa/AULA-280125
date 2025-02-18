@@ -27,11 +27,11 @@ def pagina_sobre():
 
 
 # lista de frases da pagina inicio
-lista_frases = ["Não, não consigo tirar você da minha mente, Yeah yeah",
-                "Então me atinja no rosto, algo real como a dor, como se não pudéssemos ficar mais próximos, eu só quero me perder. Então, me chame pelo, me chame pelo seu nome!",
-                "E se eu pedir uma gota de chuva, sei que você vai trazer um oceano",
-                "Lentamente, vejo a luz vermelha, estou preso a esse sonho, lentamente, nos damos a noite toda, como se estivéssemos dançando, você e eu",
-                "Toda noite, um novo corpo, fantasia de cada noite, pena que você teve que me perder"
+lista_frases = ["Não, não consigo tirar você da minha mente, Yeah yeah.",
+                "Então me atinja no rosto, algo real como a dor.",
+                "E se eu pedir uma gota de chuva, sei que você vai trazer um oceano.",
+                "Lentamente, vejo a luz vermelha, estou preso a esse sonho.",
+                "Toda noite, um novo corpo, fantasia de cada noite, pena que você teve que me perder."
                 ]
 
 # lista de frases da pagina inicio
@@ -80,6 +80,19 @@ def post_cadastrarfrase():
 
     return redirect ("/cadastro")
 
+@app.route("/frases/delete/<indice_frase>", methods = ["GET"])
+
+def delete_frases(indice_frase):
+
+    # converte o indice para inteiro pois ele vem como string
+    indice_frase = int(indice_frase)
+    
+    # exclui a cor da lista atraves do indice
+    lista_frases.pop(indice_frase)
+
+# redireciona para a rota /cadastro cores
+    return redirect ("/cadastro")
+
 
 # pagina cadastrar cores
 # GET = exibi o nome digitado no link do site
@@ -102,6 +115,19 @@ def post_cadastrarcor():
 
     return redirect ("/cadastrocores")
 
+                          #vou substituir esse valor, á apenas uma variavel 
+@app.route("/cores/delete/<indice_cor>", methods = ["GET"])
+
+def delete_cores(indice_cor):
+
+    # converte o indice para inteiro pois ele vem como string
+    indice_cor = int(indice_cor)
+    
+    # exclui a cor da lista atraves do indice
+    lista_cores2.pop(indice_cor)
+
+# redireciona para a rota /cadastro cores
+    return redirect ("/cadastrocores")
 
 #rodar
 app.run(debug=True)

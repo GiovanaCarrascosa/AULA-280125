@@ -51,8 +51,8 @@
         .material-symbols-outlined {
             
             position: absolute;
-            right: 50px;
-            top: 45px;
+            right: 30px;
+            bottom: 40px;
         }
 
 </style>
@@ -85,23 +85,31 @@
     
     <div class="row2">
         <div class="col s12 m6">
+
         <!-- para cada item da lista ele vai rodar uma caixa dessa -->
         {% for cor in cores_html%}
           <div class="card  darken-1" style="background-color: {{cor}};">
+
             <div class="card-content white-text">
+
               <span class="card-title">COR</span>
                 {{cor}}
 
-                <a>
+                                        <!-- quantas vezes ele fez esse loop? se fez 0, vai aparecer 0, se fez 1, vai aparecer 1 -->
+                <a href="/cores/delete/{{loop.index0}}">
                     <span class="material-symbols-outlined">
                     delete
                     </span>
                 </a>
                 
             </div>
+
           </div>
+
           {% endfor %}
+
         </div>
+
       </div>
 
 
